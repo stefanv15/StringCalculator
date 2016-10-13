@@ -18,5 +18,10 @@ public class CalculatorTest {
 	@Test
 	public void testTwoNumbers() {
 		assertEquals(3, Calculator.add("1,2"));
-	}	
+	}
+
+	@Test
+	public void testUnknownNumbers() {
+		assertEquals(8, Calculator.add("2,2,2,2"));
+	}		
 }
