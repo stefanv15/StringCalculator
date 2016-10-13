@@ -23,5 +23,10 @@ public class CalculatorTest {
 	@Test
 	public void testUnknownNumbers() {
 		assertEquals(8, Calculator.add("2,2,2,2"));
+	}	
+
+	@Test
+	public void testNewlineWithNumbers() {
+		assertEquals(6, Calculator.add("1\n2,3"));
 	}		
 }
