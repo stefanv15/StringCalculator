@@ -38,5 +38,10 @@ public class CalculatorTest {
 		catch (IllegalArgumentException i){
 			System.out.println(i);
 		}
+	}
+
+	@Test
+	public void testIgnoredNumbers() {
+		assertEquals(2, Calculator.add("1001,2"));
 	}	
 }

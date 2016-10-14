@@ -17,6 +17,7 @@
 
 			if(text.contains(",")){
 				int sum = SumOfUnknownNumbers(text);
+
 				return sum;
 			}
 			else
@@ -29,7 +30,10 @@
 
 			for(int i = 0; i < numbers.length; i++){
 
-				sum += toInt(numbers[i]);
+				if(toInt(numbers[i]) > 1000)
+					numbers[i] = numbers[i+1];
+				else
+					sum += toInt(numbers[i]);
 			}
 			return sum;
 		}
@@ -44,7 +48,7 @@
 			}
 			throw new IllegalArgumentException("Negatives not allowed: " + negatives.toString());
 		}
-
+		
 		private static int toInt(String text){
 			return Integer.parseInt(text);
 		}
